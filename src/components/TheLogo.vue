@@ -7,5 +7,3 @@
 <script setup>
 import { PAGE_TIMELINE } from '@/helpers/constants'
 </script>
-
-<style lang="scss" scoped></style>

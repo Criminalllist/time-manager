@@ -7,7 +7,7 @@
     <select v-bind="$attrs" class="w-full truncate rounder bg-gray-100 py-1 px-2">
       <option value="rest" selected disabled>{{ placeholder }}</option>
       <option
-        v-for="{ value, label } in activities"
+        v-for="{ value, label } in options"
         :key="value"
         :value="value"
         :selected="value === selected"
@@ -21,7 +21,13 @@
 <script setup>
 import BaseButton from './BaseButton.vue'
 import { XMarkIcon } from '@heroicons/vue/24/outline'
-defineProps(['activities', 'placeholder', 'selected'])
+// defineProps(['options', 'placeholder', 'selected']);
+
+defineProps({
+  options: { type: Object, required: true },
+  placeholder: { type: String, default: 'Rest', required: true },
+  selected: { type: Number, required: true }
+})
 
 defineOptions({
   inheritAttrs: false

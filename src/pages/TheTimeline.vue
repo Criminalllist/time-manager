@@ -13,7 +13,9 @@
 <script setup>
 import TimelineItem from '@/components/TimelineItem.vue'
 
-defineProps(['timelineItems'])
+defineProps({
+  timelineItems: { type: Object, required: true }
+})
 </script>
 
 <style lang="scss" scoped></style>

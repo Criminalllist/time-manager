@@ -15,5 +15,3 @@
 import { CheckCircleIcon } from '@heroicons/vue/24/solid'
 import { PAGE_PROGRESS } from '@/helpers/constants'
 </script>
-
-<style lang="scss" scoped></style>

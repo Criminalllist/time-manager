@@ -3,7 +3,7 @@
     <a href="#" :class="hourLinksClasses">{{ timelineItem.hour }}:00</a>
 
     <BaseSelect
-      :activities="activities"
+      :options="options"
       placeholder="Rest"
       :selected="setSelectedOption"
       name="activities"
@@ -13,9 +13,14 @@
 
 <script setup>
 import BaseSelect from '@/components/BaseSelect.vue'
-const props = defineProps(['timelineItem'])
+const props = defineProps({
+  timelineItem: {
+    type: Object,
+    required: true
+  }
+})
 
-const activities = [
+const options = [
   { value: 1, label: 'Coding' },
   { value: 2, label: 'Reading' },
   { value: 3, label: 'Training' }
